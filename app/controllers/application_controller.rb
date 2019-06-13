@@ -26,7 +26,7 @@ get '/recipes' do
 
   delete '/recipes/:id' do
     @recipe = Recipe.find(params[:id])
-    @recipe.clear
+    @recipe.delete
     redirect '/recipes'
   end
 
